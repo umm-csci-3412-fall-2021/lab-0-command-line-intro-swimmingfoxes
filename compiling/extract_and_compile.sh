@@ -1,3 +1,5 @@
 NUMBER="$1"
-gunzip NthPrime.tgz
-
+tar -x -z -f NthPrime.tgz
+cd NthPrime
+gcc main.c nth_prime.c -o nthprime
+./nthprime $NUMBER
